@@ -1,6 +1,6 @@
-const mongoose = require('mongoose')
+const mongoose = require('mongoose') // for connecting with mongdb
 
-const productSchema = mongoose.Schema(
+const productSchema = mongoose.Schema(    // create a sceama
     {
         name: {
             type: String,
@@ -21,11 +21,11 @@ const productSchema = mongoose.Schema(
         }
     },
     {
-        timestamps: true
+        timestamps: true   // so that can understand time of created and updated etc
     }
 )
 
 
-const Product = mongoose.model('Product', productSchema);
+const Product = mongoose.model('Product', productSchema);    // you call mongoose.model() on a schema, Mongoose compiles a model for you.
 
-module.exports = Product;
+module.exports = Product;   // export it so that can use 
